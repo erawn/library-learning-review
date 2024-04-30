@@ -4,11 +4,13 @@
 ## Introduction
 Anti-Unification has been a problem of continuous interest since the 1970's in Computer Science. Across a variety of application domains, anti-unification (AU) is a general approach to finding *generalizations* between symbolic expressions (Cerna 2023). First introduced by Plotkin (Plotkin 1970), it seeks to find a generalization which captures the common structure between a set of expressions. Consider Plotkin's example:
 
-$$
-Bitofiron (1) \land Heated (1,419) \subset Melted (1 ) \\
-Bitofiron (2) \land Heated (2,419) \subset Melted (2) \\
-(x)~Bitofiron (x) \land Heated (x, 419) \subset Melted (x) \\
-$$
+
+$$ Bitofiron (1) \land Heated (1,419) \subset Melted (1) $$  
+
+$$ Bitofiron (2) \land Heated (2,419) \subset Melted (2) $$  
+
+$$ (x)~Bitofiron (x) \land Heated (x, 419) \subset Melted (x) $$  
+
 
 In this example, we retain shared elements of the expression, replacing elements not shared with a variable ($x$), which we then add as an input to our resulting generalization. While other generalizations exist, namely ($x$) $x$ for any set of expressions, anti-unification is generally considered the problem of finding the *least general generalization* (lgg), in which a generalization which captures more of the common structure of the expression set does not exist. 
 
